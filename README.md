@@ -1,3 +1,3 @@
 # mat-content
 
-See the [`documentation page`](http://www.expandjs.com/elements/mat-content) for more information.
+See the [`documentation page`](http://expandjs.com/elements/mat-content) for more information.
