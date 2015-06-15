@@ -24,11 +24,11 @@
     "**/.*"
   ],
   "dependencies": {
-    "expandjs": "ExpandJS/expandjs",
+    "expandjs": "ExpandJS/expandjs#alpha",
     "polymer": "Polymer/polymer#^0.5"
   },
   "devDependencies": {
-    "mat-demo": "ExpandJS/mat-demo",
-    "mat-text-field": "ExpandJS/mat-text-field"
+    "mat-demo": "ExpandJS/mat-demo#alpha",
+    "mat-text-field": "ExpandJS/mat-text-field#alpha"
   }
 }
