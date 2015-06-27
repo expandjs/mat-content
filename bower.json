@@ -1,7 +1,7 @@
 {
   "name": "mat-content",
   "license": "BSD-3-Clause",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "A custom element used to display a generic Material Design container",
   "homepage": "http://expandjs.com/elements/mat-content",
   "authors": [
@@ -24,7 +24,7 @@
     "**/.*"
   ],
   "dependencies": {
-    "expandjs": "ExpandJS/expandjs#0.9.1",
+    "expandjs": "ExpandJS/expandjs#0.9.2",
     "polymer": "Polymer/polymer#^1.0.0"
   }
 }
