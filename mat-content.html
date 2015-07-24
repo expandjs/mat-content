@@ -7,7 +7,28 @@ The complete set of contributors may be found at https://expandjs.github.io/CONT
 -->
 
 <!--
-This element is used to display a material content.
+An element used to display generic [Material Design content](https://www.google.com/design/spec/layout/metrics-keylines.html#metrics-keylines-keylines-spacing).
+
+It will add padding around your content, based on the user's device and given attributes.
+
+```html
+<mat-content>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</mat-content>
+```
+
+Using `inset` will indent on the left side, to align the content to a possible [FAB](http://expandjs.com/elements/mat-fab) in an [app bar](http://www.google.com/design/spec/layout/structure.html#structure-app-bar).
+
+```html
+<mat-header-panel>
+    <mat-header>
+        <mat-fab left across icon="content:add"></mat-fab>
+    </mat-header>
+    <mat-content inset>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </mat-content>
+</mat-header-panel>
+```
 
 @element mat-content
 @description A custom element used to display a generic Material Design container
@@ -16,7 +37,7 @@ This element is used to display a material content.
 @homepage http://expandjs.com/elements/mat-content
 
 @dependency polymer Polymer/polymer#^1.0.0
-@dependency expandjs ExpandJS/expandjs#0.9.4
+@dependency expandjs ExpandJS/expandjs#0.9.5
 -->
 
 <link rel="import" href="../polymer/polymer.html">
