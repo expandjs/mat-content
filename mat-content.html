@@ -7,74 +7,44 @@ The complete set of contributors may be found at https://expandjs.github.io/CONT
 -->
 
 <!--
-An element used to display generic [Material Design content](https://www.google.com/design/spec/layout/metrics-keylines.html#metrics-keylines-keylines-spacing).
-
-It will add padding around your content, based on the user's device and given attributes.
-
-```html
-<mat-content>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</mat-content>
-```
-
-Using `inset` will indent on the left side, to align the content to a possible [FAB](http://expandjs.com/elements/mat-fab) in an [app bar](http://www.google.com/design/spec/layout/structure.html#structure-app-bar).
-
-```html
-<mat-header-panel>
-    <mat-header>
-        <mat-fab left across icon="content:add"></mat-fab>
-    </mat-header>
-    <mat-content inset>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </mat-content>
-</mat-header-panel>
-```
+A custom element used to add [Material Design spacing](https://www.google.com/design/spec/layout/metrics-keylines.html#metrics-keylines-keylines-spacing).
 
 @element mat-content
-@description A custom element used to display a generic Material Design container
-@keywords material design, material content, web app, html5, expandjs, web-components
+@description A custom element used to add Material Design spacing
+@keywords material design, expandjs, web app, custom elements, web-components
 @group containers
+@hot
+
 @homepage http://expandjs.com/elements/mat-content
 @repository https://github.com/ExpandJS/mat-content
 
-@dependency polymer Polymer/polymer#^1.1.0
-@dependency expandjs ExpandJS/expandjs#0.9.11
+@dependency polymer Polymer/polymer#^1.2.0
+@dependency expandjs ExpandJS/expandjs#0.10.0
+@dependency mat-spacing ExpandJS/mat-spacing#0.10.0
 -->
 
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../expandjs/expandjs.html">
+<link rel="import" href="../mat-spacing/mat-spacing.html">
 
 <dom-module id="mat-content">
 
-    <template>
+    <template strip-whitespace>
 
         <style>
-            :host {
-                box-sizing: border-box;
-                display: block;
-                overflow: visible;
-                padding: 16px;
-            }
+            :host          { @apply(--mat-padding-mobile); }
+            :host([inset]) { @apply(--mat-padding-mobile-inset); }
 
-            :host([inset]) {
-                padding-left: 72px;
-            }
-
-            /* TABLET */
+            /* DESKTOP */
 
             @media (min-width: 960px) {
 
-                :host {
-                    padding: 24px;
-                }
-
-                :host([inset]) {
-                    padding-left: 80px;
-                }
+                :host          { @apply(--mat-padding-desktop); }
+                :host([inset]) { @apply(--mat-padding-desktop-inset); }
             }
         </style>
 
-        <content id="content"></content>
+        <content></content>
 
     </template>
 
@@ -101,6 +71,15 @@ Using `inset` will indent on the left side, to align the content to a possible [
                     type: Boolean,
                     value: false
                 }
+            },
+
+            /*********************************************************************/
+
+            // LISTENER
+            created: function () {
+
+                // Classifying
+                this.classList.add('content');
             }
         });
     </script>

@@ -1,9 +1,9 @@
 {
   "name": "mat-content",
   "license": "BSD-3-Clause",
-  "version": "0.9.11",
+  "version": "0.10.0",
   "main": "mat-content.html",
-  "description": "A custom element used to display a generic Material Design container",
+  "description": "A custom element used to add Material Design spacing",
   "homepage": "http://expandjs.com/elements/mat-content",
   "authors": [
     "Giuliano Rullo <g.rullo@expandjs.com>",
@@ -12,17 +12,17 @@
   ],
   "keywords": [
     "material design",
-    "material content",
-    "web app",
-    "html5",
     "expandjs",
+    "web app",
+    "custom elements",
     "web-components"
   ],
   "ignore": [
     "**/.*"
   ],
   "dependencies": {
-    "expandjs": "ExpandJS/expandjs#0.9.11",
-    "polymer": "Polymer/polymer#^1.1.0"
+    "expandjs": "ExpandJS/expandjs#0.10.0",
+    "mat-spacing": "ExpandJS/mat-spacing#0.10.0",
+    "polymer": "Polymer/polymer#^1.2.0"
   }
 }
